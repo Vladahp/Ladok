@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}LADOK{% endblock %}</title>
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Russo+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Commissioner:wght@100..900&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <p class="top">MADE IN UKRAINE</p>
+   <h1 class="logo">LADOK</h1>
+
+
+    <div class="carousel">
+  <div class="slides">
+    <div class="slide">
+      <img src="../../static/main/shop.JPG" alt="Фото 1" />
+    </div>
+    <div class="slide">
+      <img src="../../static/main/girl.jpg" alt="Фото 2" />
+    </div>
+  </div>
+</div>
+
+
+    <nav>
+        <ul>
+
+            <li><a class="nav" href="{% url 'index' %}">Головна</a></li>
+            <li><a class="nav" href="{% url 'catalog' %}">Каталог</a></li>
+            <li><a class="nav" href="{% url 'about' %}">Про нас</a></li>
+        </ul>
+        <ul>
+            <li><a  id="img" href="https://www.instagram.com/ladok.ua/"><img src="../../static/main/inst.png"></a></li>
+            <li><a  id="img" href="tel:380734353534"><img src="../../static/main/phone.png"></a></li>
+            <li><a  id="img" href="{% url 'about' %}"><img src="../../static/main/menu.png"></a></li>
+        </ul>
+    </nav>
+
+    <hr>
+</header>
+
+    {% block content %}{% endblock %}
+
+<footer>
+    <div>
+        <h1 id="footer-title">LADOK</h1>
+    </div>
+    <div id="footer-category" class="categories">
+        <ul>
+            <li ><a class="category" href="#">Головна</a></li>
+            <li ><a class="category" href="#">Каталог</a></li>
+            <li ><a class="category" href="#">Про нас</a></li>
+            <li ><a class="category" href="#">Жінкам</a></li>
+            <li ><a class="category" href="#">Чоловікам</a></li>
+            <li ><a class="category" href="#">Дітям</a></li>
+        </ul>
+    </div>
+    <div id="footer-category" class="contacts">
+        <ul>
+            <li><a class="nav" href="tel:380734353534">+380-734-353-534</a></li>
+            <li><a class="nav" href="tel:380964353654">+380-964-353-654</a></li>
+        </ul>
+    </div>
+    <div id="footer-category">
+        <ul>
+            <li><a id="img" href="https://www.instagram.com/ladok.ua/"><img src="../../static/main/inst.png" alt=""></a></li>
+            <li><a id="img" href="#"><img src="../../static/main/phone.png" alt=""></a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Головна{% endblock %}
+
+{% block content %}
+
+
+<section class="section-new">
+    <h3 class="category-title">Категорії одягу</h3>
+    <div class="clothes">
+
+        <div class="cloth">
+            <a href="#"><img class="img-cloth" src="../../static/main/woman.jpeg" alt=""></a>
+            <p class="title-cloth">Жіночий Одяг</p>
+        </div>
+
+        <div class="cloth">
+            <a href="#"><img class="img-cloth" src="../../static/main/man.jpeg" alt=""></a>
+            <p class="title-cloth">Чоловічий одяг</p>
+        </div>
+
+        <div class="cloth">
+            <a href=""><img class="img-cloth" src="../../static/main/kids.jpg" alt=""></a>
+            <p class="title-cloth">Дитячий одяг</p>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="invite-catalog-section" >
+        <h3 class="category-title">LADOK - одяг на будь-який смак</h3>
+        <button ><a class="button" href="{% url 'catalog' %}">Відкрити каталог</a></button>
+    </div>
+
+
+</section>
+
+{% endblock %}
